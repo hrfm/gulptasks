@@ -27,18 +27,22 @@
 	// --- Setup gulp task.
 	// -------------------------------------------------------------
 
-    gulp.task("hrfm::rsync", function() {
+    gulp.task("gulptasks::rsync", function() {
         var gutil = require('gulp-util');
     	var rsync = require('rsyncwrapper');
         rsync( config.config, function(error, stdout, stderr, cmd) {
             gutil.log(error,stdout,stderr,cmd);
         });
     });
+	gulp.task("gt::rsync",["gulptasks::rsync"]);
+	gulp.task("rsync"    ,["gulptasks::rsync"]);
 
-	gulp.task("hrfm::rsync:watch", function() {
+	gulp.task("gulptasks::rsync.watch", function() {
     	var src = config.config.src + "/**/*.*"
 	    src.replace(/\/\//ig,"/");
 	    gulp.watch( src, ['hive.rsync'] );
 	});
+	gulp.task("gt::rsync.watch",["gulptasks::rsync.watch"]);
+	gulp.task("rsync.watch"    ,["gulptasks::rsync.watch"]);
 
 }).call(this);

@@ -27,7 +27,7 @@
     // --- Setup gulp task.
     // -------------------------------------------------------------
 
-    gulp.task("hrfm::webpack", function() {
+    gulp.task("gt::webpack", function() {
         var gutil   = require('gulp-util');
         var path    = require("path");
         var webpack = require('webpack');
@@ -42,13 +42,17 @@
             }
         );
     });
+    gulp.task("gt::webpack",["gulptasks::webpack"]);
+    gulp.task("webpack"    ,["gulptasks::webpack"]);
 
-    gulp.task("hrfm::webpack:watch", function() {
+    gulp.task("gt::webpack.watch", function() {
         var path    = require("path");
         var wpconf  = require(path.relative(__dirname,futil.getWorkDir())+"/"+futil.getConfig().webpack.config);
         for( var key in wpconf.entry ){
             gulp.watch( wpconf.entry[key], ['hive.webpack'] );
         }
     });
+    gulp.task("gt::webpack.watch",["gulptasks::webpack.watch"]);
+    gulp.task("webpack.watch"    ,["gulptasks::webpack.watch"]);
 
 }).call(this);

@@ -40,7 +40,7 @@
 	// --- Setup gulp task.
 	// -------------------------------------------------------------
 
-	gulp.task("hrfm::tsc", function() {
+	gulp.task("gulptasks::tsc", function() {
 
 		if( typeof config.targetDir !== "undefined" ){
 			var fs = require('fs');
@@ -66,5 +66,7 @@
 		taskHelper.checkAndWatch( tscTask, config.target );
 
 	});
+	gulp.task("gt::tsc",["gulptasks::tsc"]);
+	gulp.task("tsc"    ,["gulptasks::tsc"]);
 
 }).call(this);

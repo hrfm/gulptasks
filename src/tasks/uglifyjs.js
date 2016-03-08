@@ -38,8 +38,10 @@
     // --- Setup gulp task.
     // -------------------------------------------------------------
 
-    gulp.task("hrfm::uglifyjs", function() {
+    gulp.task("gulptasks::uglifyjs", function() {
         taskHelper.checkAndWatch( uglifyTask, config.target );
     });
+    gulp.task("gt::uglifyjs",["gulptasks::uglifyjs"]);
+    gulp.task("uglifyjs"    ,["gulptasks::uglifyjs"]);
 
 }).call(this);

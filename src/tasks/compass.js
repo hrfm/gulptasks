@@ -35,8 +35,10 @@
 	// --- Setup gulp task.
 	// -------------------------------------------------------------
 
-	gulp.task("hrfm::compass", function() {
+	gulp.task("gulptasks::compass", function() {
 		taskHelper.checkAndWatch( compassTask, config.target );
 	});
+	gulp.task("gt::compass",["gulptasks::compass"]);
+    gulp.task("compass"    ,["gulptasks::compass"]);
 
 }).call(this);
