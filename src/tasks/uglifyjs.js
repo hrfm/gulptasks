@@ -29,7 +29,7 @@
     var SubTask = require('gulp-subtask')(gulp);
     var	uglify  = require('gulp-uglifyjs');
     var plumber = require('gulp-plumber');
-    var uglifyTask = new SubTask('uglify').src('{{src}}')
+    var uglifyTask = new SubTask('gt::uglifyjs').src('{{src}}')
         .pipe( plumber )
         .pipe( uglify, config.config)
         .pipe( gulp.dest, config.dest );

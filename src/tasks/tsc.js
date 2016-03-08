@@ -26,7 +26,7 @@
 	var SubTask = require('gulp-subtask')(gulp);
 	var plumber = require('gulp-plumber');
 	var tsc     = require('gulp-typescript');
-	var tscTask = new SubTask('tsc')
+	var tscTask = new SubTask('gt::tsc')
 		.src(['{{src}}','!**/*.d.ts','!*.d.ts'])
 		.pipe( plumber )
 		.pipe( tsc, config.config )

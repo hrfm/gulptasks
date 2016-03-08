@@ -29,7 +29,7 @@
 	var SubTask = require('gulp-subtask')(gulp);
 	var	compass = require('gulp-compass');
 	var plumber = require('gulp-plumber');
-	var compassTask = new SubTask('compass').src('{{src}}').pipe( plumber ).pipe( compass, config.config );
+	var compassTask = new SubTask('gt::compass').src('{{src}}').pipe( plumber ).pipe( compass, config.config );
 
 	// ================================================================
 	// --- Setup gulp task.
