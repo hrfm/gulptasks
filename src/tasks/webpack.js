@@ -20,8 +20,8 @@
     // --- Import required modules.
     // -------------------------------------------------------------
 
-    var gulp  = require('gulp');
-    var futil   = require('../utils/fileutil');
+    var gulp  = require('../../bridge').getGulp();
+    var futil = require('../utils/fileutil');
 
     // ================================================================
     // --- Setup gulp task.

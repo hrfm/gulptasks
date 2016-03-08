@@ -19,8 +19,8 @@
 	// ================================================================
 	// --- Import required modules.
 	// -------------------------------------------------------------
-
-	var gulp = require('gulp');
+	
+	var gulp  = require('../../bridge').getGulp();
 	var gutil = require('gulp-util');
 	var futil = require('../utils/fileutil');
 	var config = futil.getConfig().compass;
@@ -38,5 +38,5 @@
 	gulp.task("hrfm::compass", function() {
 		taskHelper.checkAndWatch( compassTask, config.target );
 	});
-	
+
 }).call(this);

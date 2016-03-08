@@ -20,7 +20,7 @@
     // --- Import required modules.
     // -------------------------------------------------------------
 
-    var gulp = require('gulp');
+    var gulp  = require('../../bridge').getGulp();
     var gutil = require('gulp-util');
     var futil = require('../utils/fileutil');
     var config = futil.getConfig().uglifyjs;

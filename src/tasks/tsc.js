@@ -18,7 +18,7 @@
 	// --- Import required modules.
 	// -------------------------------------------------------------
 
-	var gulp  = require('gulp');
+	var gulp  = require('../../bridge').getGulp();
 	var futil = require('../utils/fileutil');
 	var config = futil.getConfig().tsc;
 	var taskHelper = require('../utils/taskhelper');
