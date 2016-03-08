@@ -24,7 +24,7 @@ module.exports = {
 		'target' : [
 			{
 				'options' : {
-					'src' : './js/app.ts',
+					'src' : './src/js/app.ts',
 					'outputDir' : "./bin/js"
 				},
 				'watchWith' : ['./src/js/**/*.js']
