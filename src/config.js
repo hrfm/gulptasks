@@ -27,7 +27,7 @@ module.exports = {
 					'src' : './src/js/app.ts',
 					'outputDir' : "./bin/js"
 				},
-				'watchWith' : ['./src/js/**/*.js']
+				'watchWith' : []
 			}
 		]
 	},
@@ -42,7 +42,7 @@ module.exports = {
                 'options' : {
                     'src' : './bin/js/app.js'
                 },
-                //'watchWith' : []
+                'watchWith' : []
             }
         ]
     },
@@ -59,9 +59,9 @@ module.exports = {
 		'target' : [
 			{
 				'options' : {
-					'src' : ['./src/css/app.scss']
+					'src' : './src/css/app.scss'
 				},
-				'watchWith' : ['./src/css/**/*.scss']
+				'watchWith' : []
 			}
 		]
 	},
