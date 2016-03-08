@@ -1,0 +1,36 @@
+{
+  "name": "gulptasks",
+  "version": "0.0.1",
+  "description": "gulptasks ---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrfm/gulptasks.git"
+  },
+  "author": "hrfm <hrfm0818@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hrfm/gulptasks/issues"
+  },
+  "homepage": "https://github.com/hrfm/gulptasks#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "extend": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-subtask": "^0.3.4",
+    "gulp-typescript": "^2.12.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.0"
+    "webpack": "^1.12.14"
+  }
+}
