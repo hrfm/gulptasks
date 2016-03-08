@@ -30,7 +30,7 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "path": "^0.12.7",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
     "webpack": "^1.12.14"
   }
 }
