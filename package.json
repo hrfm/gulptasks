@@ -31,6 +31,8 @@
     "gulp-watch": "^4.3.5",
     "path": "^0.12.7",
     "require-dir": "^0.3.0",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.8.9",
     "webpack": "^1.12.14"
   }
 }

@@ -5,7 +5,8 @@ module.exports = {
 	// --- [tasks/webpack.js] ---
 
 	'webpack' : {
-		'config' : './webpack.config.js'
+		'config'    : './webpack.config.js',
+		'watchWith' : ''
 	},
 
 	// --- [tasks/tsc.js] ---
@@ -77,7 +78,7 @@ module.exports = {
 			'deleteAll'  : false,
 			'privateKey' : "path/to/key.pem",
 			'src'        : '../public/',
-			'dest'       : "user@host:/path/to/dest/",
+			'dest'       : "user@host:/path/to/dest/"
 		}
     }
 
