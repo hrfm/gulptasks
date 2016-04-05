@@ -23,7 +23,7 @@
     var gulp  = require('../../bridge').getGulp();
     var gutil = require('gulp-util');
     var futil = require('../utils/fileutil');
-    var config = futil.getConfig().uglifyjs;
+    var config = futil.getConfig().uglify;
     var taskHelper = require('../utils/taskhelper');
 
     var SubTask = require('gulp-subtask')(gulp);

@@ -14,9 +14,9 @@
  */
 ;(function(){
 
-	'use strict';
+    'use strict';
 
-	// ================================================================
+    // ================================================================
     // --- Import required modules.
     // -------------------------------------------------------------
 
@@ -27,7 +27,7 @@
     // --- Setup gulp task.
     // -------------------------------------------------------------
 
-    gulp.task("gt::webpack", function() {
+    gulp.task("gulptasks::webpack", function() {
         var gutil   = require('gulp-util');
         var path    = require("path");
         var webpack = require('webpack');
@@ -45,11 +45,11 @@
     gulp.task("gt::webpack",["gulptasks::webpack"]);
     gulp.task("webpack"    ,["gulptasks::webpack"]);
 
-    gulp.task("gt::webpack.watch", function() {
+    gulp.task("gulptasks::webpack.watch", function() {
         var path    = require("path");
         var wpconf  = require(path.relative(__dirname,futil.getWorkDir())+"/"+futil.getConfig().webpack.config);
         for( var key in wpconf.entry ){
-            gulp.watch( wpconf.entry[key], ['hive.webpack'] );
+            gulp.watch( wpconf.entry[key], ['gulptasks::webpack'] );
         }
     });
     gulp.task("gt::webpack.watch",["gulptasks::webpack.watch"]);
