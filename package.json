@@ -16,7 +16,9 @@
     "url": "https://github.com/hrfm/gulptasks/issues"
   },
   "homepage": "https://github.com/hrfm/gulptasks#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-uglify": "^1.5.3"
+  },
   "dependencies": {
     "extend": "^3.0.0",
     "gulp": "^3.9.1",
@@ -26,7 +28,6 @@
     "gulp-plumber": "^1.1.0",
     "gulp-subtask": "^0.3.4",
     "gulp-typescript": "^2.12.1",
-    "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "path": "^0.12.7",

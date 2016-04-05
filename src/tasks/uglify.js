@@ -27,21 +27,21 @@
     var taskHelper = require('../utils/taskhelper');
 
     var SubTask = require('gulp-subtask')(gulp);
-    var	uglify  = require('gulp-uglifyjs');
+    var	uglify  = require('gulp-uglify');
     var plumber = require('gulp-plumber');
-    var uglifyTask = new SubTask('gt::uglifyjs').src('{{src}}')
+    var uglifyTask = new SubTask('gt::uglify').src('{{src}}')
         .pipe( plumber )
         .pipe( uglify, config.config)
         .pipe( gulp.dest, config.dest );
-
+    
     // ================================================================
     // --- Setup gulp task.
     // -------------------------------------------------------------
 
-    gulp.task("gulptasks::uglifyjs", function() {
+    gulp.task("gulptasks::uglify", function() {
         taskHelper.checkAndWatch( uglifyTask, config.target );
     });
-    gulp.task("gt::uglifyjs",["gulptasks::uglifyjs"]);
-    gulp.task("uglifyjs"    ,["gulptasks::uglifyjs"]);
+    gulp.task("gt::uglify",["gulptasks::uglify"]);
+    gulp.task("uglify"    ,["gulptasks::uglify"]);
 
 }).call(this);

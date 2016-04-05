@@ -35,7 +35,7 @@ module.exports = {
 
     // --- [tasks/uglify.js] ---
 
-    'uglifyjs' : {
+    'uglify' : {
         'config' : {},
         'dest' : "./bin/js",
         'target' : [

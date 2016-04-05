@@ -38,8 +38,13 @@
 	gulp.task("rsync"    ,["gulptasks::rsync"]);
 
 	gulp.task("gulptasks::rsync.watch", function() {
-    	var src = config.config.src + "/**/*.*"
-	    src.replace(/\/\//ig,"/");
+        var src;
+        if( typeof config.watchAs !== "undefined" ){
+            src = config.watchAs;
+        }else{
+            src = config.config.src + "/**/*.*"
+            src.replace(/\/\//ig,"/");
+        }
 	    gulp.watch( src, ['hive.rsync'] );
 	});
 	gulp.task("gt::rsync.watch",["gulptasks::rsync.watch"]);
